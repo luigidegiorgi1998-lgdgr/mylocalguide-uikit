@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Sign In · MyLocalGuide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="app-shell flex flex-col items-center justify-center pb-[103px] pt-[135px] px-5 relative">
+
+  <!-- Background carousel -->
+  <div class="absolute inset-0 bg-[#f9f9f9]">
+    <div class="bg-carousel absolute inset-0"></div>
+    <div class="absolute inset-0 backdrop-blur-[1px] bg-[rgba(249,249,249,0.4)]"></div>
+  </div>
+
+  <!-- Top header -->
+  <div class="absolute backdrop-blur-[6px] bg-[rgba(249,249,249,0.9)] border-b border-[rgba(209,209,214,0.5)] flex h-16 items-center justify-center left-0 right-0 top-0 z-10">
+    <h1 class="font-bold text-[22px] tracking-[-0.55px] text-black">MyLocalGuide</h1>
+  </div>
+
+  <!-- Card -->
+  <main class="backdrop-blur-[6px] bg-[rgba(249,249,249,0.4)] border border-[rgba(209,209,214,0.3)] flex flex-col gap-10 items-start max-w-[400px] p-[25px] relative rounded-2xl w-full z-[1] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)]">
+
+    <div class="flex flex-col gap-2 items-center w-full">
+      <h2 class="font-bold text-[28px] leading-[34px] text-black text-center">Sign In</h2>
+      <p class="text-[15px] leading-5 text-[#636366] text-center">Welcome back to the trusted canvas of<br />local discovery.</p>
+    </div>
+
+    <form class="flex flex-col gap-4 items-start w-full" onsubmit="event.preventDefault(); window.location.href='explore.html';">
+      <div class="flex flex-col gap-2 items-start w-full">
+        <label class="text-[13px] font-medium tracking-[0.13px] text-black" for="email">Email</label>
+        <div class="relative w-full">
+          <img src="assets/icons/icon-email.svg" alt="" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-4" />
+          <input id="email" type="email" placeholder="name@example.com"
+            class="bg-[rgba(249,249,249,0.4)] border border-[#d1d1d6] h-[52px] pl-[49px] pr-[17px] rounded-lg text-[15px] text-black placeholder:text-[#8e8e93] w-full outline-none focus:border-black" />
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2 items-start w-full">
+        <label class="text-[13px] font-medium tracking-[0.13px] text-black" for="password">Password</label>
+        <div class="relative w-full">
+          <img src="assets/icons/icon-lock.svg" alt="" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-[21px]" />
+          <input id="password" type="password" placeholder="••••••••"
+            class="bg-[rgba(249,249,249,0.4)] border border-[#d1d1d6] h-[52px] pl-[49px] pr-[44px] rounded-lg text-[15px] text-black placeholder:text-[#8e8e93] w-full outline-none focus:border-black" />
+          <button type="button" data-toggle-password="#password" aria-label="Toggle password visibility" class="absolute right-4 top-1/2 -translate-y-1/2">
+            <img src="assets/icons/icon-eye.svg" alt="" class="w-[22px] h-[19.8px]" />
+          </button>
+        </div>
+        <div class="flex justify-end w-full pt-1">
+          <a href="#" data-noop class="text-[13px] font-medium tracking-[0.13px] text-[#636366]">Forgot Password?</a>
+        </div>
+      </div>
+
+      <button type="submit" class="bg-black h-[52px] rounded-xl flex items-center justify-center w-full mt-2">
+        <span class="text-[17px] font-semibold text-white">Sign In</span>
+      </button>
+
+      <div class="flex gap-4 items-center w-full py-2">
+        <div class="bg-[#d1d1d6] h-px flex-1"></div>
+        <span class="text-[13px] font-medium tracking-[0.13px] text-[#8e8e93] whitespace-nowrap">or continue with</span>
+        <div class="bg-[#d1d1d6] h-px flex-1"></div>
+      </div>
+
+      <div class="flex gap-4 items-start w-full">
+        <button type="button" data-noop class="bg-[rgba(249,249,249,0.4)] border border-[#d1d1d6] flex-1 h-[52px] rounded-xl flex items-center justify-center gap-2">
+          <img src="assets/icons/icon-google.svg" alt="" class="size-[18px]" />
+          <span class="text-[13px] font-medium tracking-[0.13px] text-black">Google</span>
+        </button>
+        <button type="button" data-noop class="bg-[rgba(249,249,249,0.4)] border border-[#d1d1d6] flex-1 h-[52px] rounded-xl flex items-center justify-center gap-2">
+          <img src="assets/icons/icon-apple.svg" alt="" class="w-4 h-4" />
+          <span class="text-[13px] font-medium tracking-[0.13px] text-black">Apple</span>
+        </button>
+      </div>
+    </form>
+
+    <p class="text-[15px] text-[#636366] text-center w-full pt-2">
+      Don't have an account? <a href="register.html" class="font-semibold text-[17px] text-black">Create Account</a>
+    </p>
+  </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

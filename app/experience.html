@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Secret Reef Break Surfing · MyLocalGuide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="app-shell flex flex-col items-start pb-[100px] relative bg-[#f9f9f9]">
+
+  <!-- Immersive header image -->
+  <div class="relative w-full h-[486px] shrink-0">
+    <img src="assets/images/experience-header-siargao.png" alt="Secret Reef Break Surfing" class="absolute inset-0 size-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+
+    <div class="absolute top-0 left-0 right-0 flex items-center justify-between px-5 py-4">
+      <button data-back="explore.html" aria-label="Back" class="backdrop-blur-[6px] bg-white/20 border border-white/10 rounded-full flex items-center justify-center size-10">
+        <img src="assets/icons/icon-back-white.svg" alt="" class="size-[13.3px]" />
+      </button>
+      <div class="flex gap-3 items-start">
+        <button data-noop aria-label="Share" class="backdrop-blur-[6px] bg-white/20 border border-white/10 rounded-full flex items-center justify-center size-10">
+          <img src="assets/icons/icon-share-white.svg" alt="" class="w-[13.3px] h-[17.5px]" />
+        </button>
+        <button data-noop aria-label="Save" class="backdrop-blur-[6px] bg-white/20 border border-white/10 rounded-full flex items-center justify-center size-10">
+          <img src="assets/icons/icon-heart-white.svg" alt="" class="w-[16.7px] h-[15.3px]" />
+        </button>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0 flex flex-col gap-2 px-5 pb-6">
+      <div class="flex gap-2 items-center">
+        <img src="assets/icons/icon-pin-white.svg" alt="" class="w-[10.7px] h-[13.3px]" />
+        <span class="text-[13px] font-medium tracking-[0.65px] uppercase text-white/90">Siargao, Philippines</span>
+      </div>
+      <h1 class="font-bold text-[28px] leading-[35px] text-white">Secret Reef Break Surfing</h1>
+    </div>
+  </div>
+
+  <main class="flex flex-col w-full">
+
+    <!-- Bento stats -->
+    <div class="grid grid-cols-2 gap-2 px-5 pt-10">
+      <div class="bg-[#f2f2f7] border border-[rgba(209,209,214,0.5)] rounded-2xl p-[17px] flex flex-col gap-1">
+        <img src="assets/icons/icon-duration.svg" alt="" class="w-5 h-6" />
+        <span class="text-[11px] font-semibold uppercase text-[#636366]">Duration</span>
+        <span class="text-[17px] font-semibold text-black">3-4 Hours</span>
+      </div>
+      <div class="bg-[#f2f2f7] border border-[rgba(209,209,214,0.5)] rounded-2xl p-[17px] flex flex-col gap-1">
+        <img src="assets/icons/icon-skill.svg" alt="" class="w-4 h-6" />
+        <span class="text-[11px] font-semibold uppercase text-[#636366]">Skill Level</span>
+        <span class="text-[17px] font-semibold text-black">Intermediate+</span>
+      </div>
+      <div class="bg-[#f2f2f7] border border-[rgba(209,209,214,0.5)] rounded-2xl p-[17px] flex flex-col gap-1">
+        <img src="assets/icons/icon-group.svg" alt="" class="w-6 h-4" />
+        <span class="text-[11px] font-semibold uppercase text-[#636366]">Group Size</span>
+        <span class="text-[17px] font-semibold text-black">Max 3 Ppl</span>
+      </div>
+      <div class="bg-[#f2f2f7] border border-[rgba(209,209,214,0.5)] rounded-2xl p-[17px] flex flex-col gap-1">
+        <img src="assets/icons/icon-language.svg" alt="" class="w-[22px] h-6" />
+        <span class="text-[11px] font-semibold uppercase text-[#636366]">Languages</span>
+        <span class="text-[17px] font-semibold text-black">Eng, Tagalog</span>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <p class="text-[17px] leading-[27.6px] text-[#636366] px-5 pt-8">
+      Escape the crowded peaks of Cloud 9 and journey with us to a secluded reef break known only to local pros.
+      This experience is designed for surfers who want pristine, uncrowded waves and a deep connection to Siargao's
+      raw coastal energy. We handle the boat transfer and timing to ensure we hit the tide perfectly.
+    </p>
+
+    <!-- Host -->
+    <a href="chat.html" class="mx-5 mt-6 bg-white border border-[#d1d1d6] shadow-sm flex items-center justify-between p-[17px] rounded-2xl">
+      <div class="flex gap-4 items-center">
+        <div class="border border-[#d1d1d6] rounded-full overflow-hidden size-16">
+          <img src="assets/images/host-kiko.png" alt="Local Guide Kiko" class="size-full object-cover" />
+        </div>
+        <div class="flex flex-col items-start">
+          <span class="text-[11px] font-semibold uppercase text-[#636366] pb-0.5">Hosted by</span>
+          <h3 class="font-semibold text-[22px] leading-7 text-black">Local Guide Kiko</h3>
+          <p class="text-[15px] text-[#8e8e93] pt-1">Born and raised on the island waves.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center pl-4 shrink-0">
+        <div class="bg-black border border-white shadow-sm rounded-full flex items-center justify-center size-10 mb-1">
+          <img src="assets/icons/icon-cert-check.svg" alt="" class="w-[18.3px] h-[17.5px]" />
+        </div>
+        <span class="text-[9px] text-black text-center tracking-[0.45px] uppercase leading-tight">Local<br />Certified</span>
+      </div>
+    </a>
+
+    <!-- What to expect / bring -->
+    <div class="flex flex-col gap-6 px-5 pt-8">
+      <div class="flex flex-col gap-3 items-start w-full">
+        <h3 class="font-semibold text-[17px] text-black">What to Expect</h3>
+        <ul class="flex flex-col gap-2 items-start w-full">
+          <li class="flex gap-2 items-start"><img src="assets/icons/icon-check-1.svg" alt="" class="w-[15px] h-[17px] mt-0.5" /><span class="text-[15px] text-[#636366]">Boat transfer to the secret reef break</span></li>
+          <li class="flex gap-2 items-start"><img src="assets/icons/icon-check-1.svg" alt="" class="w-[15px] h-[17px] mt-0.5" /><span class="text-[15px] text-[#636366]">3 hours of guided surfing and instruction</span></li>
+          <li class="flex gap-2 items-start"><img src="assets/icons/icon-check-1.svg" alt="" class="w-[15px] h-[17px] mt-0.5" /><span class="text-[15px] text-[#636366]">Local surf snacks and hydration</span></li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-3 items-start w-full">
+        <h3 class="font-semibold text-[17px] text-black">What to Bring</h3>
+        <ul class="flex flex-col gap-2 items-start w-full">
+          <li class="flex gap-2 items-start"><img src="assets/icons/icon-check-2.svg" alt="" class="w-[15px] h-[17px] mt-0.5" /><span class="text-[15px] text-[#636366]">High-SPF sunscreen (reef-safe)</span></li>
+          <li class="flex gap-2 items-start"><img src="assets/icons/icon-check-2.svg" alt="" class="w-[15px] h-[17px] mt-0.5" /><span class="text-[15px] text-[#636366]">Rash guard or wetsuit top</span></li>
+          <li class="flex gap-2 items-start"><img src="assets/icons/icon-check-2.svg" alt="" class="w-[15px] h-[17px] mt-0.5" /><span class="text-[15px] text-[#636366]">Personal towel</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Location map -->
+    <div class="flex flex-col gap-4 px-5 pt-8">
+      <div class="flex flex-col gap-1 items-start w-full">
+        <h3 class="font-semibold text-[17px] text-black">Location</h3>
+        <p class="text-[15px] text-[#8e8e93]">General Luna, Siargao (Exact meeting point provided after booking)</p>
+      </div>
+      <div class="relative border border-[#d1d1d6] rounded-2xl overflow-hidden h-[240px] w-full">
+        <img src="assets/images/map-siargao.png" alt="Detailed map of General Luna, Siargao" class="absolute inset-0 size-full object-cover opacity-80" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="bg-black border-2 border-white rounded-full flex items-center justify-center size-12 shadow-lg">
+            <img src="assets/icons/icon-map-pin.svg" alt="" class="w-4 h-5" />
+          </div>
+        </div>
+        <button data-noop class="absolute backdrop-blur-[6px] bg-white/90 border border-[#d1d1d6] bottom-4 right-4 rounded-full flex gap-2 items-center px-3.5 py-1.5">
+          <img src="assets/icons/icon-expand.svg" alt="" class="size-3" />
+          <span class="text-[11px] font-semibold uppercase text-black">Expand Map</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Fixed bottom action bar -->
+  <div class="fixed bottom-0 backdrop-blur-[8px] bg-white/90 border-t border-[#d1d1d6] flex items-center justify-between w-full max-w-[390px] px-5 pt-[17px] pb-4">
+    <div class="flex flex-col items-start">
+      <span class="text-[11px] font-semibold uppercase text-[#636366]">Total Price</span>
+      <p class="flex gap-1 items-baseline"><span class="font-bold text-2xl text-black">$85</span><span class="text-[15px] text-[#8e8e93]">/ person</span></p>
+    </div>
+    <a href="booking-confirmation.html" class="bg-black h-[52px] rounded-xl flex items-center justify-center px-8">
+      <span class="text-[17px] font-semibold text-white">Book Now</span>
+    </a>
+  </div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

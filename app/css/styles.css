@@ -1,0 +1,65 @@
+/* MyLocalGuide — shared styles
+   Tailwind (Play CDN) handles utility classes inline in each page.
+   This file only covers what Tailwind can't: fonts, the phone-shell
+   preview frame, and a couple of small effects. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background: #e5e5ea;
+  color: #1b1b1b;
+}
+
+/* Center the mobile screens in a phone-shell frame on wider viewports;
+   collapses to true full-bleed mobile below 480px. */
+.app-shell {
+  max-width: 390px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media (min-width: 480px) {
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0;
+  }
+  .app-shell {
+    min-height: 844px;
+    height: 844px;
+    overflow-y: auto;
+    border-radius: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.35), 0 0 0 10px #111;
+  }
+}
+
+.font-display {
+  font-family: 'Playfair Display', 'Inter', serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+}
+
+/* Decorative background carousel used on Login / Registration */
+.bg-carousel {
+  background-image: url('../assets/images/experience-header-siargao.png');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1) contrast(0.9);
+}

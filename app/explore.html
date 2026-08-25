@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Discover Paris · MyLocalGuide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="app-shell flex flex-col items-start pb-[97px] relative">
+
+  <!-- Top App Bar -->
+  <header class="backdrop-blur-[6px] bg-[rgba(255,255,255,0.8)] flex items-center justify-between px-5 py-3 w-full sticky top-0 z-20">
+    <button aria-label="Search" data-noop class="flex flex-col items-center justify-center pb-1.5">
+      <img src="assets/icons/icon-search.svg" alt="" class="size-[18px]" />
+    </button>
+    <h1 class="font-bold text-[16px] text-black">MyLocalGuide</h1>
+    <button aria-label="Profile" data-noop class="border border-[#d1d1d6] rounded-full overflow-hidden size-8">
+      <img src="assets/images/user-avatar.png" alt="Your profile" class="size-full object-cover" />
+    </button>
+  </header>
+
+  <main class="flex flex-col items-start pt-4 w-full">
+
+    <!-- Heading -->
+    <div class="flex flex-col gap-1 items-start pb-2 px-5 w-full">
+      <span class="text-[13px] font-medium tracking-[0.65px] uppercase text-[#636366]">Discover</span>
+      <h2 class="text-[28px] leading-[34px]"><span class="font-bold text-black">Paris, </span><span class="font-display italic text-[#636366]">France</span></h2>
+    </div>
+
+    <!-- Filter chips -->
+    <div class="flex gap-2 items-center overflow-x-auto px-5 pb-6 w-full" style="scrollbar-width:none">
+      <button class="bg-black shadow-sm shrink-0 px-5 h-10 rounded-full text-[13px] font-medium text-white">Viewpoints</button>
+      <button data-noop class="bg-white border border-[#d1d1d6] shrink-0 px-5 h-10 rounded-full text-[13px] font-medium text-[#636366]">Architecture</button>
+      <button data-noop class="bg-white border border-[#d1d1d6] shrink-0 px-5 h-10 rounded-full text-[13px] font-medium text-[#636366]">Street Art</button>
+      <button data-noop class="bg-white border border-[#d1d1d6] shrink-0 px-5 h-10 rounded-full text-[13px] font-medium text-[#636366]">Café Culture</button>
+    </div>
+
+    <!-- Featured bento grid -->
+    <section class="flex flex-col gap-4 items-start px-5 pb-10 w-full">
+      <h3 class="font-semibold text-[22px] text-black">Featured</h3>
+
+      <div class="flex flex-col gap-2 items-start w-full">
+        <a href="experience.html" class="block relative rounded-2xl overflow-hidden border border-[#d1d1d6] shadow-sm w-full h-[200px]">
+          <img src="assets/images/hidden-passages.png" alt="Hidden Passages Walking Tour" class="absolute inset-0 size-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="absolute inset-0 flex flex-col justify-end p-4">
+            <p class="font-semibold text-[17px] text-white pb-1">Hidden Passages Walking Tour</p>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-1 items-center opacity-90">
+                <img src="assets/icons/icon-pin-white.svg" alt="" class="w-[9.3px] h-[11.65px]" />
+                <span class="text-[13px] font-medium tracking-[0.13px] text-white">Le Marais</span>
+              </div>
+              <span class="font-semibold text-[17px] text-white">€45</span>
+            </div>
+          </div>
+        </a>
+
+        <div class="flex gap-2 items-start w-full h-[140px] pt-2">
+          <div class="border border-[#d1d1d6] rounded-2xl flex-1 h-full flex flex-col justify-between p-[17px]">
+            <div class="bg-[#f2f2f7] flex items-center justify-center rounded-full size-10">
+              <img src="assets/icons/icon-camera.svg" alt="" class="w-5 h-[18px]" />
+            </div>
+            <div class="flex flex-col gap-1 items-start">
+              <p class="font-semibold text-[17px] text-black">Camera Gear</p>
+              <p class="text-[13px] font-medium tracking-[0.13px] text-[#636366]">Included in tour</p>
+            </div>
+          </div>
+          <a href="experience.html" class="relative border border-[#d1d1d6] rounded-2xl overflow-hidden flex-1 h-full">
+            <img src="assets/images/gallery-tour.png" alt="Gallery" class="absolute inset-0 size-full object-cover" />
+            <div class="absolute inset-0 bg-black/20"></div>
+            <p class="absolute bottom-3 left-3 font-bold text-[13px] tracking-[0.13px] text-white">Gallery</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated spots -->
+    <section class="flex flex-col gap-4 items-start px-5 pb-10 w-full">
+      <h3 class="font-semibold text-[22px] text-black">Curated Spots</h3>
+      <div class="flex flex-col gap-4 items-start w-full">
+
+        <a href="experience.html" class="bg-white border border-[#d1d1d6] flex gap-4 items-center p-[13px] rounded-2xl w-full">
+          <img src="assets/images/rue-des-thermopyles.png" alt="" class="rounded-xl size-20 object-cover shrink-0" />
+          <div class="flex-1 flex flex-col items-start min-w-0">
+            <h4 class="font-semibold text-[17px] text-black pb-1">Rue des Thermopyles</h4>
+            <p class="text-[13px] font-medium tracking-[0.13px] text-[#636366] pb-1">14th Arrondissement</p>
+            <span class="bg-[#f2f2f7] rounded-sm px-2 py-0.5 text-[11px] font-semibold text-[#8e8e93]">Architecture</span>
+          </div>
+          <button aria-label="Save" data-noop class="bg-[#f2f2f7] rounded-full size-8 flex items-center justify-center shrink-0">
+            <img src="assets/icons/icon-bookmark.svg" alt="" class="w-[10.5px] h-[13.5px]" />
+          </button>
+        </a>
+
+        <a href="experience.html" class="bg-white border border-[#d1d1d6] flex gap-4 items-center p-[13px] rounded-2xl w-full">
+          <img src="assets/images/printemps-terrace.png" alt="" class="rounded-xl size-20 object-cover shrink-0" />
+          <div class="flex-1 flex flex-col items-start min-w-0">
+            <h4 class="font-semibold text-[17px] text-black pb-1">Printemps Terrace</h4>
+            <p class="text-[13px] font-medium tracking-[0.13px] text-[#636366] pb-1">9th Arrondissement</p>
+            <span class="bg-[#f2f2f7] rounded-sm px-2 py-0.5 text-[11px] font-semibold text-[#8e8e93]">Viewpoint</span>
+          </div>
+          <button aria-label="Save" data-noop class="bg-[#f2f2f7] rounded-full size-8 flex items-center justify-center shrink-0">
+            <img src="assets/icons/icon-bookmark.svg" alt="" class="w-[10.5px] h-[13.5px]" />
+          </button>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating map toggle -->
+  <a href="map.html" aria-label="Switch to map view"
+     class="fixed bottom-[96px] right-5 bg-black text-white rounded-full shadow-lg px-4 py-2.5 flex items-center gap-2 z-30" style="max-width:390px">
+    <img src="assets/icons/icon-map-pin.svg" alt="" class="size-4 invert" />
+    <span class="text-[13px] font-semibold">Map</span>
+  </a>
+
+  <!-- Bottom nav -->
+  <nav class="fixed bottom-0 backdrop-blur-[8px] bg-[rgba(255,255,255,0.9)] border-t border-[#d1d1d6] flex gap-6 h-20 items-center justify-center w-full max-w-[390px] z-20">
+    <a href="explore.html" class="flex flex-col items-center justify-center rounded-lg size-12 gap-1">
+      <img src="assets/icons/nav-explore.svg" alt="" class="size-5" />
+      <span class="text-[11px] font-semibold text-black">Explore</span>
+    </a>
+    <a href="#" data-noop class="flex flex-col items-center justify-center rounded-lg size-12 gap-1">
+      <img src="assets/icons/nav-saved.svg" alt="" class="w-5 h-[18.35px]" />
+      <span class="text-[11px] font-semibold text-[#8e8e93]">Saved</span>
+    </a>
+    <a href="chat.html" class="relative flex flex-col items-center justify-center rounded-lg size-12 gap-1">
+      <img src="assets/icons/nav-inbox.svg" alt="" class="w-5 h-4" />
+      <span class="text-[11px] font-semibold text-[#8e8e93]">Inbox</span>
+      <span class="absolute bg-black border border-white rounded-full size-2 top-1 right-3"></span>
+    </a>
+    <a href="#" data-noop class="flex flex-col items-center justify-center rounded-lg size-12 gap-1">
+      <img src="assets/icons/nav-profile.svg" alt="" class="size-4" />
+      <span class="text-[11px] font-semibold text-[#8e8e93]">Profile</span>
+    </a>
+  </nav>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

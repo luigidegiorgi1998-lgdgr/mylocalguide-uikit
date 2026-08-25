@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Map · Paris · MyLocalGuide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="app-shell flex flex-col items-start relative">
+
+  <!-- Top App Bar -->
+  <header class="backdrop-blur-[6px] bg-[rgba(255,255,255,0.8)] flex items-center justify-between px-5 py-3 w-full z-20">
+    <button data-back="explore.html" aria-label="Back" class="flex items-center justify-center size-10">
+      <img src="assets/icons/icon-back.svg" alt="" class="size-[18px]" />
+    </button>
+    <h1 class="font-bold text-[16px] text-black">MyLocalGuide</h1>
+    <div class="border border-[#d1d1d6] rounded-full overflow-hidden size-10">
+      <img src="assets/images/user-avatar-2.png" alt="Your profile" class="size-full object-cover" />
+    </div>
+  </header>
+
+  <!-- Map canvas -->
+  <main class="relative flex-1 w-full overflow-hidden" style="height: 597px;">
+    <div class="absolute inset-0 bg-[#f2f2f7]">
+      <img src="assets/images/map-paris.png" alt="Map of Paris" class="size-full object-cover opacity-80" />
+    </div>
+
+    <!-- Filter chips overlay -->
+    <div class="absolute top-4 left-5 right-5 flex gap-2 overflow-x-auto" style="scrollbar-width:none">
+      <button data-noop class="bg-[#f2f2f7] border border-[#d1d1d6] shrink-0 px-[17px] py-2 rounded-full text-[13px] font-medium text-[#636366]">All</button>
+      <button class="bg-black shadow-sm shrink-0 px-4 py-2 rounded-full text-[13px] font-medium text-white">Art</button>
+      <button data-noop class="bg-[#f2f2f7] border border-[#d1d1d6] shrink-0 px-[17px] py-2 rounded-full text-[13px] font-medium text-[#636366]">Culture</button>
+      <button data-noop class="bg-[#f2f2f7] border border-[#d1d1d6] shrink-0 px-[17px] py-2 rounded-full text-[13px] font-medium text-[#636366]">Outdoor</button>
+      <button data-noop class="bg-[#f2f2f7] border border-[#d1d1d6] shrink-0 px-[17px] py-2 rounded-full text-[13px] font-medium text-[#636366]">Food</button>
+    </div>
+
+    <!-- Floating list toggle -->
+    <a href="explore.html" aria-label="Switch to list view"
+       class="absolute z-30 bg-black text-white rounded-full shadow-lg px-4 py-2.5 flex items-center gap-2" style="top: 68px; right: 20px;">
+      <img src="assets/icons/icon-search.svg" alt="" class="size-4 invert" />
+      <span class="text-[13px] font-semibold">List</span>
+    </a>
+
+    <!-- Price pin markers -->
+    <button data-noop class="absolute bg-white border-2 border-black shadow flex gap-1 items-center px-2.5 py-1.5 rounded-full" style="top:33%; left:33%;">
+      <img src="assets/icons/icon-pin-landmark.svg" alt="" class="size-[13.3px]" />
+      <span class="text-[13px] font-semibold text-black">$25</span>
+    </button>
+    <button data-noop class="absolute bg-white border-2 border-black shadow flex gap-1 items-center px-2.5 py-1.5 rounded-full" style="top:25%; left:58%;">
+      <img src="assets/icons/icon-pin-art.svg" alt="" class="size-[13.3px]" />
+      <span class="text-[13px] font-semibold text-black">$40</span>
+    </button>
+    <button data-noop class="absolute bg-white border-2 border-black shadow flex gap-1 items-center px-2.5 py-1.5 rounded-full" style="top:62%; left:25%;">
+      <img src="assets/icons/icon-pin-culture.svg" alt="" class="size-3 h-[13.3px]" />
+      <span class="text-[13px] font-semibold text-black">Free</span>
+    </button>
+
+    <!-- Active marker -->
+    <div class="absolute flex flex-col items-center -translate-x-1/2 -translate-y-1/2" style="top:50%; left:50%;">
+      <button data-noop class="bg-black border-2 border-black shadow flex gap-1 items-center px-2.5 py-1.5 rounded-full -mb-px">
+        <img src="assets/icons/icon-pin-camera.svg" alt="" class="w-[13.3px] h-3" />
+        <span class="text-[13px] font-semibold text-white">$35</span>
+      </button>
+      <div class="w-0 h-0 border-l-[6px] border-r-[6px] border-t-[8px] border-l-transparent border-r-transparent border-t-black"></div>
+    </div>
+
+    <!-- Mini preview card -->
+    <a href="experience.html" class="absolute left-5 right-5 bottom-6 bg-white border border-[#d1d1d6] flex gap-3 items-start p-[13px] rounded-2xl shadow-lg">
+      <div class="relative rounded-lg size-24 shrink-0 overflow-hidden">
+        <img src="assets/images/vintage-film-photo-walk.png" alt="" class="size-full object-cover" />
+        <span class="absolute top-1 right-1 bg-black border-2 border-white rounded-full p-1 flex items-center justify-center">
+          <img src="assets/icons/icon-cert-check-small.svg" alt="" class="w-[8.15px] h-[6px]" />
+        </span>
+      </div>
+      <div class="flex-1 flex flex-col justify-between min-w-0 self-stretch py-1">
+        <div class="flex flex-col gap-0.5 items-start w-full">
+          <div class="flex items-start justify-between w-full">
+            <span class="text-[11px] font-semibold tracking-[0.55px] uppercase text-[#636366]">Art &amp; Photography</span>
+            <span class="text-[17px] text-black shrink-0">$35</span>
+          </div>
+          <h4 class="font-semibold text-[17px] leading-[21px] text-black">Vintage Film Photo Walk by the Seine</h4>
+        </div>
+        <div class="flex gap-1 items-center pt-2 text-[13px] whitespace-nowrap overflow-hidden">
+          <img src="assets/icons/icon-star.svg" alt="" class="w-[11.7px] h-[11px] shrink-0" />
+          <span class="font-semibold tracking-[0.13px] text-black shrink-0">4.9</span>
+          <span class="font-medium tracking-[0.13px] text-[#636366] shrink-0">(128)</span>
+          <span class="text-[#636366] shrink-0">•</span>
+          <span class="font-medium tracking-[0.13px] text-[#636366] truncate">2.5 hours</span>
+        </div>
+      </div>
+    </a>
+  </main>
+
+
+  <!-- Bottom nav -->
+  <nav class="backdrop-blur-[8px] bg-[rgba(255,255,255,0.9)] border-t border-[#d1d1d6] flex gap-6 h-[83px] items-center justify-center w-full z-20">
+    <a href="explore.html" class="flex flex-col items-center justify-center rounded-xl size-12 gap-1">
+      <img src="assets/icons/nav-explore-2.svg" alt="" class="size-5" />
+      <span class="text-[11px] font-semibold text-black">Explore</span>
+    </a>
+    <a href="#" data-noop class="flex flex-col items-center justify-center rounded-xl size-12 gap-1">
+      <img src="assets/icons/nav-saved-2.svg" alt="" class="w-5 h-[18.35px]" />
+      <span class="text-[11px] font-semibold text-[#8e8e93]">Saved</span>
+    </a>
+    <a href="chat.html" class="flex flex-col items-center justify-center rounded-xl size-12 gap-1">
+      <img src="assets/icons/nav-inbox-2.svg" alt="" class="w-5 h-4" />
+      <span class="text-[11px] font-semibold text-[#8e8e93]">Inbox</span>
+    </a>
+    <a href="#" data-noop class="flex flex-col items-center justify-center rounded-xl size-12 gap-1">
+      <img src="assets/icons/nav-profile-2.svg" alt="" class="size-4" />
+      <span class="text-[11px] font-semibold text-[#8e8e93]">Profile</span>
+    </a>
+  </nav>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

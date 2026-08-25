@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Register · MyLocalGuide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="app-shell flex flex-col items-start py-8 relative">
+
+  <!-- Background carousel -->
+  <div class="absolute inset-0 bg-[#f9f9f9]">
+    <div class="bg-carousel absolute inset-0"></div>
+    <div class="absolute inset-0 backdrop-blur-[1px] bg-[rgba(249,249,249,0.4)]"></div>
+  </div>
+
+  <!-- Top header -->
+  <div class="absolute backdrop-blur-[6px] bg-[rgba(249,249,249,0.9)] border-b border-[rgba(209,209,214,0.5)] flex h-16 items-center justify-between left-0 right-0 top-0 px-5 z-10">
+    <button data-back="login.html" aria-label="Close" class="p-2 -ml-2">
+      <img src="assets/icons/icon-close.svg" alt="" class="size-[13.3px]" />
+    </button>
+    <h1 class="font-bold text-[22px] text-black">MyLocalGuide</h1>
+    <div class="w-[29px]"></div>
+  </div>
+
+  <main class="flex items-center justify-center pt-16 relative w-full z-[1]">
+    <div class="backdrop-blur-[6px] bg-[rgba(249,249,249,0.4)] border border-[rgba(209,209,214,0.3)] flex flex-col gap-10 items-start max-w-[480px] px-[25px] py-[41px] rounded-2xl w-[350px] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)]">
+
+      <div class="flex flex-col gap-2 items-center w-full">
+        <h2 class="font-bold text-[28px] leading-[34px] text-black text-center">Unlock the City</h2>
+        <p class="text-[15px] leading-5 text-[#636366] text-center">Join MyLocalGuide to discover authentic,<br />locally-certified experiences.</p>
+      </div>
+
+      <!-- Subscription tiers -->
+      <div class="flex flex-col gap-4 items-start w-full" role="radiogroup" aria-label="Subscription tier">
+        <div data-tier class="bg-[rgba(249,249,249,0.6)] border border-black flex gap-4 items-start overflow-hidden p-[17px] relative rounded-xl shadow-sm w-full cursor-pointer">
+          <div class="pt-1">
+            <div data-tier-dot class="bg-black border-2 border-black flex items-center justify-center p-0.5 rounded-full size-5">
+              <img src="assets/icons/icon-radio-check.svg" alt="" class="w-[9.5px] h-[7px]" />
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col gap-1 items-start">
+            <div class="flex items-start justify-between w-full pr-24 pt-5">
+              <span class="font-semibold text-[17px] text-black">Premium</span>
+              <span class="flex gap-0 items-end"><span class="font-bold text-[17px] text-black">$20</span><span class="text-[15px] text-[#636366]">/yr</span></span>
+            </div>
+            <p class="text-[15px] text-[#636366]">Full access to all local insights.</p>
+            <div class="flex flex-col gap-2 items-start pt-3 w-full">
+              <div class="flex gap-2 items-center">
+                <img src="assets/icons/icon-check-cert.svg" alt="" class="w-[16.5px] h-[15.75px]" />
+                <span class="text-[13px] font-medium tracking-[0.13px] text-black">Unlimited Certified Experiences</span>
+              </div>
+              <div class="flex gap-2 items-center">
+                <img src="assets/icons/icon-map-feature.svg" alt="" class="size-[13.5px]" />
+                <span class="text-[13px] font-medium tracking-[0.13px] text-black">Offline Maps &amp; Itineraries</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute bg-black right-0 top-0 rounded-bl-lg px-3 py-1">
+            <span class="font-bold text-[11px] text-white tracking-[0.55px] uppercase">Recommended</span>
+          </div>
+        </div>
+
+        <div data-tier class="bg-[rgba(255,255,255,0.4)] border border-[rgba(209,209,214,0.5)] flex gap-4 items-start p-[17px] rounded-xl w-full cursor-pointer">
+          <div class="pt-1">
+            <div data-tier-dot class="border-2 border-[#d1d1d6] flex items-center justify-center p-0.5 rounded-full size-5">
+              <img src="assets/icons/icon-radio-check-2.svg" alt="" class="w-[9.5px] h-[7px] opacity-0" />
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col gap-1 items-start">
+            <div class="flex items-baseline justify-between w-full">
+              <span class="font-semibold text-[17px] text-black">Basic</span>
+              <span class="font-bold text-[17px] text-black">Free</span>
+            </div>
+            <p class="text-[15px] text-[#636366]">Start exploring with limits.</p>
+            <div class="flex gap-2 items-center opacity-70 pt-3">
+              <img src="assets/icons/icon-lock-small.svg" alt="" class="w-3 h-[15.75px]" />
+              <span class="text-[13px] font-medium tracking-[0.13px] text-black">5 Experiences per month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-[rgba(209,209,214,0.5)] w-full"></div>
+
+      <form class="flex flex-col gap-4 items-start w-full" onsubmit="event.preventDefault(); window.location.href='explore.html';">
+        <div class="flex flex-col gap-1 items-start w-full">
+          <label class="text-[13px] font-medium tracking-[0.13px] text-black pl-1" for="fullname">Full Name</label>
+          <input id="fullname" type="text" placeholder="Marta Silva"
+            class="bg-[rgba(249,249,249,0.4)] border border-[#d1d1d6] h-[52px] px-[17px] rounded-xl text-[15px] text-black placeholder:text-[#8e8e93] w-full outline-none focus:border-black" />
+        </div>
+        <div class="flex flex-col gap-1 items-start w-full">
+          <label class="text-[13px] font-medium tracking-[0.13px] text-black pl-1" for="reg-email">Email Address</label>
+          <input id="reg-email" type="email" placeholder="marta@example.com"
+            class="bg-[rgba(249,249,249,0.4)] border border-[#d1d1d6] h-[52px] px-[17px] rounded-xl text-[15px] text-black placeholder:text-[#8e8e93] w-full outline-none focus:border-black" />
+        </div>
+        <div class="flex flex-col gap-1 items-start w-full pb-4">
+          <label class="text-[13px] font-medium tracking-[0.13px] text-black pl-1" for="reg-password">Password</label>
+          <div class="relative w-full">
+            <input id="reg-password" type="password" placeholder="••••••••"
+              class="bg-[rgba(249,249,249,0.4)] border border-[#d1d1d6] h-[52px] pl-[17px] pr-[49px] rounded-xl text-[15px] text-black placeholder:text-[#8e8e93] w-full outline-none focus:border-black" />
+            <button type="button" data-toggle-password="#reg-password" aria-label="Toggle password visibility" class="absolute right-4 top-1/2 -translate-y-1/2">
+              <img src="assets/icons/icon-eye-2.svg" alt="" class="w-[18.3px] h-[12.5px]" />
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="bg-black h-[52px] rounded-xl flex items-center justify-center gap-2 w-full">
+          <span class="text-[17px] font-semibold text-white">Start Your Journey</span>
+          <img src="assets/icons/icon-arrow-right.svg" alt="" class="size-[13.3px]" />
+        </button>
+
+        <p class="text-[11px] font-semibold text-[#8e8e93] text-center w-full">
+          By registering, you agree to our <a href="#" data-noop class="text-black underline">Terms</a> and <a href="#" data-noop class="text-black underline">Privacy Policy</a>.
+        </p>
+      </form>
+    </div>
+  </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "name": "@mylocalguide/ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MyLocalGuide design system — components and tokens, generated from the Figma UI Kit.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./tokens.css": "./src/styles/tokens.css"
+  },
+  "files": [
+    "dist",
+    "src/styles"
+  ],
+  "scripts": {
+    "build": "tsup && npm run build:css",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles/tokens.css -o ./dist/styles.css --minify",
+    "dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "lint": "eslint src",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "react-dom": ">=19"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "radix-ui": "^1.6.7",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "latest",
+    "@storybook/addon-a11y": "^10.5.10",
+    "@storybook/addon-docs": "^10.5.10",
+    "@storybook/addon-mcp": "latest",
+    "@storybook/addon-vitest": "^10.5.10",
+    "@storybook/react-vite": "^10.5.10",
+    "@tailwindcss/cli": "^4",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/browser-playwright": "latest",
+    "@vitest/coverage-v8": "latest",
+    "playwright": "latest",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "storybook": "^10.5.10",
+    "tailwindcss": "^4",
+    "tsup": "^8",
+    "typescript": "^5",
+    "vitest": "latest"
+  }
+}

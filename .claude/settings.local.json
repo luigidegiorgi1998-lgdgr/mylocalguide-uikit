@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "Bash(cd ~/.claude/skills/app-store-screenshots && find . -maxdepth 3 -not -path './.git*' | sort)",
+      "mcp__0f41a870-40e7-4f08-8975-dab7d64863b0__get_design_context",
+      "Bash(python3 -m http.server 8791)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8791/login.html)",
+      "Bash(cat /tmp/mlg_server.log 2>&1; echo \"---\"; ps aux | grep http.server | grep -v grep)"
+    ]
+  }
+}

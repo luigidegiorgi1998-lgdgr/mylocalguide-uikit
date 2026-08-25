@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Elena R. · MyLocalGuide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="app-shell flex flex-col bg-[#f9f9f9]" style="height: 844px;">
+
+  <!-- Top App Bar -->
+  <header class="backdrop-blur-[6px] bg-[rgba(249,249,249,0.9)] flex items-center justify-between pl-3 pr-5 py-3 shrink-0 z-10">
+    <button data-back="experience.html" aria-label="Back" class="flex items-center justify-center p-2 rounded-full">
+      <img src="assets/icons/icon-back-2.svg" alt="" class="size-4" />
+    </button>
+    <div class="flex flex-col items-center">
+      <h1 class="font-semibold text-[17px] text-black">Elena R.</h1>
+      <span class="text-[11px] font-semibold text-[#8e8e93]">Online</span>
+    </div>
+    <button data-noop aria-label="More" class="flex items-center justify-center">
+      <img src="assets/icons/icon-more.svg" alt="" class="w-4 h-1" />
+    </button>
+  </header>
+
+  <!-- Chat thread -->
+  <div data-chat-thread class="flex-1 overflow-y-auto flex flex-col gap-4 px-5 py-4">
+
+    <div class="border-b border-[#d1d1d6] flex flex-col items-center pb-6 pt-2 w-full">
+      <div class="rounded-full shadow-sm size-24 overflow-hidden mb-4">
+        <img src="assets/images/elena-avatar.png" alt="Elena" class="size-full object-cover" />
+      </div>
+      <h2 class="font-semibold text-[22px] text-[#1b1b1b] pb-1">Meet Elena</h2>
+      <p class="text-[15px] text-[#636366] text-center max-w-[298px]">Local coffee aficionado and urban explorer. Passionate about sharing the hidden stories of our city's cafe culture.</p>
+    </div>
+
+    <a href="experience.html" class="bg-white border border-[#d1d1d6] shadow-sm flex gap-4 items-center p-[17px] rounded-2xl w-full">
+      <img src="assets/images/coffee-tasting-thumb.png" alt="" class="rounded-xl size-16 object-cover shrink-0" />
+      <div class="flex flex-col items-start">
+        <span class="text-[13px] font-semibold tracking-[0.13px] text-black">Hidden Coffee Tasting</span>
+        <span class="text-[11px] font-semibold text-[#636366] pt-0.5">Tomorrow, 10:00 AM</span>
+      </div>
+    </a>
+
+    <div class="flex items-center justify-center w-full py-2">
+      <span class="text-[11px] font-semibold tracking-[1.1px] uppercase text-[#8e8e93]">Today</span>
+    </div>
+
+    <div class="flex flex-col items-start w-full">
+      <div class="flex gap-3 items-end max-w-[85%]">
+        <img src="assets/images/elena-avatar-small.png" alt="" class="rounded-full size-8 shrink-0" />
+        <div class="bg-[#eee] px-4 py-4 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-sm">
+          <p class="text-[15px] text-[#1b1b1b] leading-5">Hi there! Thanks for booking the tasting. Are there any dietary restrictions I should know about beforehand?</p>
+        </div>
+      </div>
+      <span class="text-[11px] font-semibold text-[#8e8e93] pl-11 pt-1">09:42 AM</span>
+    </div>
+
+    <div class="flex flex-col items-end w-full">
+      <div class="max-w-[85%] bg-black shadow-sm px-4 py-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-sm">
+        <p class="text-[15px] text-white leading-5">Hello Elena! No dietary restrictions, I drink everything.</p>
+      </div>
+      <span class="text-[11px] font-semibold text-[#8e8e93] pt-1">09:45 AM</span>
+    </div>
+
+    <div class="flex flex-col items-start w-full">
+      <div class="flex gap-3 items-end max-w-[85%]">
+        <img src="assets/images/elena-avatar-small.png" alt="" class="rounded-full size-8 shrink-0" />
+        <div class="bg-[#eee] px-4 py-4 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-sm">
+          <p class="text-[15px] text-[#1b1b1b] leading-5">Perfect. See you tomorrow at the main entrance. I'll have a small 'Local Certified' sign.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-end w-full">
+      <div class="flex gap-2 items-end max-w-[85%]">
+        <div class="bg-black shadow-sm px-4 py-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-sm">
+          <p class="text-[15px] text-white leading-5">Sounds great, looking forward to it!</p>
+        </div>
+        <img src="assets/icons/icon-read-receipt.svg" alt="Read" class="w-[12.8px] h-[21px] mb-0.5" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Composer -->
+  <form data-chat-form class="bg-white border-t border-[#d1d1d6] flex items-end gap-3 px-5 pt-[17px] pb-4 shrink-0">
+    <button type="button" data-noop aria-label="Attach" class="flex items-center justify-center p-2.5 rounded-full">
+      <img src="assets/icons/icon-attach.svg" alt="" class="size-5" />
+    </button>
+    <div class="bg-[#f2f2f7] flex-1 rounded-full px-5 py-3.5">
+      <input type="text" placeholder="Type a message..." class="bg-transparent w-full text-[15px] text-black placeholder:text-[#8e8e93] outline-none" />
+    </div>
+    <button type="submit" aria-label="Send" class="bg-black shadow-sm rounded-full flex items-center justify-center size-12 shrink-0">
+      <img src="assets/icons/icon-send.svg" alt="" class="size-[13.3px]" />
+    </button>
+  </form>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

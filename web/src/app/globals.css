@@ -1,0 +1,31 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Design tokens now live in @mylocalguide/ui (packages/ui/src/styles/
+   tokens.css) — the single source of truth, kept in sync with Figma.
+   This app just consumes them; don't redefine tokens here.
+   tokens.css brings in `@import "tailwindcss";` itself, so it isn't
+   repeated here — importing it twice risked the two Tailwind passes not
+   sharing @theme context, which is what caused the earlier
+   "unknown utility class" build error. */
+@import "@mylocalguide/ui/tokens.css";
+
+/* Tailwind v4's auto content-detection skips node_modules by default —
+   @mylocalguide/ui is only reached through the workspace symlink there,
+   so its component source (where classes like bg-primary/bg-destructive
+   actually appear) is invisible to the scanner unless named explicitly. */
+@source "../../../packages/ui/src/**/*.{ts,tsx}";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}

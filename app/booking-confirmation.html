@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Booking Confirmed · MyLocalGuide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="app-shell flex flex-col items-start">
+
+  <!-- Top App Bar -->
+  <header class="bg-white flex items-center h-16 px-5 w-full shrink-0">
+    <button data-back="explore.html" aria-label="Close" class="p-2 -ml-2">
+      <img src="assets/icons/icon-close-2.svg" alt="" class="size-3.5" />
+    </button>
+    <h1 class="font-bold text-2xl text-black mx-auto pr-8">Confirmation</h1>
+  </header>
+
+  <main class="flex flex-col items-center w-full px-5 pt-8">
+
+    <!-- Doodle scatter -->
+    <div class="relative w-full h-[150px]">
+      <img src="assets/images/illustration-camera.png" alt="" class="absolute w-20 h-auto" style="top:10px; left:18%; transform: rotate(-10deg);" />
+      <img src="assets/images/illustration-bonjour.png" alt="" class="absolute w-24 h-auto" style="top:-6px; right:10%; transform: rotate(14deg);" />
+    </div>
+
+    <h2 class="font-bold text-[28px] text-black text-center pb-2">Booking Confirmed</h2>
+    <p class="text-[17px] leading-6 text-[#636366] text-center max-w-[280px]">Your adventure in Paris is set. You'll receive a confirmation email shortly.</p>
+
+    <!-- Doodle scatter 2 -->
+    <div class="relative w-full h-[110px]">
+      <img src="assets/images/illustration-eiffel.png" alt="" class="absolute w-16 h-auto" style="top:10px; left:22%; transform: rotate(-16deg);" />
+      <img src="assets/images/illustration-croissant.png" alt="" class="absolute w-16 h-auto" style="top:18px; right:16%; transform: rotate(10deg);" />
+    </div>
+
+    <!-- Reservation summary -->
+    <button data-summary-toggle class="bg-white border border-[#d1d1d6] flex items-center justify-between p-4 rounded-2xl w-full mt-2">
+      <span class="font-semibold text-[17px] text-black">Reservation Summary</span>
+      <img data-summary-chevron src="assets/icons/icon-chevron-down.svg" alt="" class="w-3 h-[7.4px] transition-transform" />
+    </button>
+    <div data-summary-panel class="hidden bg-[#f2f2f7] border border-t-0 border-[#d1d1d6] rounded-b-2xl -mt-2 pt-4 w-full px-4 pb-4">
+      <dl class="flex flex-col gap-2 text-[15px]">
+        <div class="flex justify-between"><dt class="text-[#636366]">Experience</dt><dd class="text-black font-medium">Secret Reef Break Surfing</dd></div>
+        <div class="flex justify-between"><dt class="text-[#636366]">Date</dt><dd class="text-black font-medium">Tomorrow, 10:00 AM</dd></div>
+        <div class="flex justify-between"><dt class="text-[#636366]">Guests</dt><dd class="text-black font-medium">1 person</dd></div>
+        <div class="flex justify-between"><dt class="text-[#636366]">Total Paid</dt><dd class="text-black font-medium">$85</dd></div>
+      </dl>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex flex-col gap-2 items-start w-full pt-8">
+      <a href="explore.html" class="bg-black flex items-center justify-center h-[52px] rounded-xl w-full">
+        <span class="text-[17px] font-semibold text-white">Go to Bookings</span>
+      </a>
+      <a href="chat.html" class="bg-[#e5e5ea] border border-[#d1d1d6] flex items-center justify-center h-[52px] rounded-xl w-full">
+        <span class="text-[17px] font-semibold text-black">Contact Host</span>
+      </a>
+    </div>
+  </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+/* ============================================================
+   MyLocalGuide design tokens
+   Generated from the MyLocalGuide UI Kit (Figma). Light mode only —
+   dark mode was deliberately deferred in Figma and is not implemented
+   here either. This file is the single source of truth for the design
+   system's Tailwind theme; the web app's globals.css should stay a thin
+   wrapper that imports this package's styles.css rather than duplicating
+   these values.
+   ============================================================ */
+
+@theme inline {
+  /* --- shadcn-style semantic color mapping (values defined in :root) --- */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* --- Brand + status colors, exposed as Tailwind color utilities
+     (bg-brand-accent, text-status-success, etc.) --- */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-status-success: var(--status-success);
+  --color-status-success-bg: var(--status-success-bg);
+  --color-status-success-text: var(--status-success-text);
+  --color-status-warning: var(--status-warning);
+  --color-status-warning-bg: var(--status-warning-bg);
+  --color-status-warning-text: var(--status-warning-text);
+  --color-status-error: var(--status-error);
+  --color-status-error-bg: var(--status-error-bg);
+  --color-status-error-text: var(--status-error-text);
+  --color-status-info: var(--status-info);
+  --color-status-info-bg: var(--status-info-bg);
+  --color-status-info-text: var(--status-info-text);
+
+  /* --- Radius scale (Figma radius/* steps, not shadcn's calc()-derived
+     scale) --- */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 28px;
+  --radius-3xl: 28px;
+
+  /* --- Typography scale (Type/* text styles). Each pairs a
+     --text-{name} size with its own line-height, per Tailwind v4
+     convention, so `text-h1` etc. carry correct leading. --- */
+  --text-display: 2rem;
+  --text-display--line-height: 2.5rem;
+  --text-h1: 1.75rem;
+  --text-h1--line-height: 2.25rem;
+  --text-h2: 1.375rem;
+  --text-h2--line-height: 1.75rem;
+  --text-h3: 1.125rem;
+  --text-h3--line-height: 1.5rem;
+  --text-subtitle: 1rem;
+  --text-subtitle--line-height: 1.375rem;
+  --text-body: 0.875rem;
+  --text-body--line-height: 1.25rem;
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1rem;
+  --text-label: 0.6875rem;
+  --text-label--line-height: 0.875rem;
+  --text-label--letter-spacing: 0.025rem;
+  --text-button: 1rem;
+  --text-button--line-height: 1.25rem;
+}
+
+:root {
+  /* ============================================================
+     Primitives — raw palette. Prefer the semantic tokens below;
+     reach for these directly only when no semantic role fits yet.
+     ============================================================ */
+  --primary-100: #FBF4EF;
+  --primary-200: #F7E6DC;
+  --primary-300: #EECDB7;
+  --primary-400: #E5B190;
+  --primary-500: #D98E5E;
+  --primary-600: #BE652D;
+  --primary-700: #8C4B21;
+  --primary-800: #5E3216;
+  --primary-900: #321B0C;
+
+  --secondary-100: #FDFAF8;
+  --secondary-200: #FCF5F0;
+  --secondary-300: #F8EBDF;
+  --secondary-400: #F4E0CE;
+  --secondary-500: #EFD2B8;
+  --secondary-600: #DC9C63;
+  --secondary-700: #C0722B;
+  --secondary-800: #814C1D;
+  --secondary-900: #452910;
+
+  --accent-100: #F9EEEA;
+  --accent-200: #F3DBD2;
+  --accent-300: #E6B5A3;
+  --accent-400: #D98C6F;
+  --accent-500: #C35B34;
+  --accent-600: #934527;
+  --accent-700: #6C331D;
+  --accent-800: #492213;
+  --accent-900: #27120A;
+
+  --neutral-100: #E9E9E9;
+  --neutral-200: #E7E7E7;
+  --neutral-300: #CFCFCF;
+  --neutral-400: #B6B6B6;
+  --neutral-500: #9C9C9C;
+  --neutral-600: #818181;
+  --neutral-700: #656565;
+  --neutral-800: #474747;
+  --neutral-900: #212121;
+
+  --base-white: #FFFFFF;
+  --base-black: #000000;
+
+  --success-100: #E4F0E7;
+  --success-500: #4C8B5C;
+  --success-700: #2F5639;
+  --warning-100: #FAF2E4;
+  --warning-500: #D9A441;
+  --warning-700: #92691D;
+  --error-100: #F7E5E4;
+  --error-500: #C4453B;
+  --error-700: #7A2B25;
+  --info-100: #E1EEF2;
+  --info-500: #3E7C8C;
+  --info-700: #264D57;
+
+  /* ============================================================
+     Semantic tokens — from the Figma "Color" collection. These are
+     what components should actually bind to.
+     ============================================================ */
+  --color-bg-page: var(--neutral-100);
+  --color-bg-surface: var(--base-white);
+  --color-border-default: var(--neutral-200);
+  --color-text-primary: var(--neutral-900);
+  --color-text-body: var(--neutral-800);
+  --color-text-secondary: var(--neutral-700);
+  --color-text-muted: var(--neutral-600);
+  --color-text-on-accent: var(--base-white);
+
+  --brand-primary: var(--primary-500);
+  --brand-secondary: var(--secondary-500);
+  --brand-accent: var(--accent-500);
+
+  --status-success: var(--success-500);
+  --status-success-bg: var(--success-100);
+  --status-success-text: var(--success-700);
+  --status-warning: var(--warning-500);
+  --status-warning-bg: var(--warning-100);
+  --status-warning-text: var(--warning-700);
+  --status-error: var(--error-500);
+  --status-error-bg: var(--error-100);
+  --status-error-text: var(--error-700);
+  --status-info: var(--info-500);
+  --status-info-bg: var(--info-100);
+  --status-info-text: var(--info-700);
+
+  /* State (Read me "Done"/"Next" roadmap indicators) */
+  --color-state-done: var(--success-700);
+  --color-state-next: var(--warning-500);
+
+  /* ============================================================
+     shadcn-style semantic mapping (light mode only — no .dark block).
+     ------------------------------------------------------------
+     NOTE on --primary: in the Figma Button component, "Primary" is
+     near-black (neutral/900) with white text, NOT the terracotta brand
+     color — that was a deliberate choice (matches the approved
+     wireframes, and terracotta fails contrast with white text at this
+     size). Terracotta lives under --brand-primary /
+     --color-brand-primary for accents, chips, and links instead.
+     NOTE on --ring: status/info (teal-blue), not brand/primary — the
+     warm terracotta read too close to --destructive (warm red) as a
+     focus indicator.
+     ============================================================ */
+  --background: var(--color-bg-page);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-bg-surface);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-bg-surface);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--neutral-900);
+  --primary-foreground: var(--base-white);
+  --secondary: var(--primary-200);
+  --secondary-foreground: var(--color-text-primary);
+  --muted: var(--color-bg-page);
+  --muted-foreground: var(--color-text-muted);
+  --accent: var(--color-bg-page);
+  --accent-foreground: var(--color-text-primary);
+  --destructive: var(--status-error);
+  --destructive-foreground: var(--base-white);
+  --border: var(--color-border-default);
+  --input: var(--color-border-default);
+  --ring: var(--status-info);
+  --radius: 1rem; /* 16px, radius/lg — Button/card default */
+
+  /* ============================================================
+     Layout tokens — spacing, opacity, icon sizes, touch target.
+     ------------------------------------------------------------
+     Spacing note: MLG's spacing scale (2/4/8/12/16/24/32/48/64/96) is
+     already 4px-based, so it maps exactly onto Tailwind's default
+     spacing utilities — no override needed. spacing/16 === p-4,
+     spacing/24 === p-6, spacing/32 === p-8, spacing/48 === p-12,
+     spacing/64 === p-16, spacing/96 === p-24, spacing/8 === p-2,
+     spacing/4 === p-1, spacing/2 === p-0.5. Just use Tailwind's normal
+     spacing utilities.
+     ============================================================ */
+  --opacity-hover: 0.08;
+  --opacity-pressed: 0.12;
+  --opacity-disabled: 0.4;
+  --opacity-overlay: 0.6;
+  --opacity-scrim: 0.75;
+
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+  --icon-xl: 32px;
+
+  --touch-target-min: 44px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
