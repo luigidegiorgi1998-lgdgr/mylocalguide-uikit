@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+/* Inter — the only typeface used across the MyLocalGuide UI kit (see
+   Typography foundations in Figma). Self-hosted here (not left to the
+   consuming app) so the package renders correctly standalone — e.g. in
+   Claude Design, which only sees this compiled bundle, not the web
+   app's next/font setup. One variable-font file covers the whole
+   weight range the kit uses (400/500/600/700). */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/inter-variable-latin.woff2") format("woff2");
+}
+
 /* ============================================================
    MyLocalGuide design tokens
    Generated from the MyLocalGuide UI Kit (Figma). Light mode only —
@@ -49,6 +63,12 @@
   --color-status-info: var(--status-info);
   --color-status-info-bg: var(--status-info-bg);
   --color-status-info-text: var(--status-info-text);
+
+  /* --- Typeface. Inter everywhere; the app is expected to override
+     --font-sans (e.g. via next/font) for its own perf/self-hosting
+     strategy — this is the fallback that makes the package correct
+     even when nothing overrides it. --- */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   /* --- Radius scale (Figma radius/* steps, not shadcn's calc()-derived
      scale) --- */
@@ -241,4 +261,5 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
+  font-family: var(--font-sans);
 }

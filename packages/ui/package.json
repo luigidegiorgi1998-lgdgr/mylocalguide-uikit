@@ -18,11 +18,12 @@
   },
   "files": [
     "dist",
-    "src/styles"
+    "src/styles",
+    "src/fonts"
   ],
   "scripts": {
     "build": "tsup && npm run build:css",
-    "build:css": "npx @tailwindcss/cli -i ./src/styles/tokens.css -o ./dist/styles.css --minify",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles/tokens.css -o ./dist/styles.css --minify && node scripts/fix-css-font-paths.mjs",
     "dev": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "lint": "eslint src",

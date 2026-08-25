@@ -1,0 +1,12 @@
+{
+  "projectId": "7b211be7-5d23-4726-8c50-a4f67894ae2b",
+  "shape": "storybook",
+  "pkg": "@mylocalguide/ui",
+  "storybookConfigDir": "packages/ui/.storybook",
+  "storybookStatic": ".design-sync/sb-reference",
+  "buildCmd": "npm run build --workspace=@mylocalguide/ui",
+  "titleMap": {
+    "Color": null,
+    "Typography": null
+  }
+}
