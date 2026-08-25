@@ -8,5 +8,6 @@
   "titleMap": {
     "Color": null,
     "Typography": null
-  }
+  },
+  "readmeHeader": ".design-sync/conventions.md"
 }
